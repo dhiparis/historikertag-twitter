@@ -34,16 +34,21 @@ In order to access the Twitter API a you need a free developer account with elev
 If you don't want to only rehydrate the data, but also search in the historical Twitter data yourself you need and account with academic research, premium or enterprise access.
 
 More information on getting the access here: https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api
+
 Implementation in rtweet: https://docs.ropensci.org/rtweet/articles/auth.html
+
 Youtube: Create Twitter Developer Account (German, at 10:33): https://youtu.be/zu9haE92hrI?t=634
+
 Youtube: Create Twitter App and Token (German, at 37:59): https://youtu.be/zu9haE92hrI?t=2279
 
 When you have created a Twitter app, add your credentials in **historikertage_corpora.R** on line 32:
-    twitter_key <- "your_twitter_key"
-    twitter_secret_key <- "your_twitter_secret_key"
-    twitter_api_access_token <- "your_twitter_api_access_token"
-    twitter_api_access_token_secret <- "your_twitter_api_access_token_secret"
-    twitter_app <- "your_twitter_app_name"
+```
+twitter_key <- "your_twitter_key"
+twitter_secret_key <- "your_twitter_secret_key"
+twitter_api_access_token <- "your_twitter_api_access_token"
+twitter_api_access_token_secret <- "your_twitter_api_access_token_secret"
+twitter_app <- "your_twitter_app_name"
+```
 
 ## 1.3 Create histag_all & gender
 After adding the credentials you can run the script which will create the data frame **histag_all** with all the tweets, and the data frame **gender**, with all the accounts in the corpus are created. These two data frame are the basis for the tables and figures in the report.
