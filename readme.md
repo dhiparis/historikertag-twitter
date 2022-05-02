@@ -1,19 +1,21 @@
 # Historikertage Twitter Code
 This repository contains the code to recreate the annotated figures, tables, statistics and visualisations of the project "Die twitternde Zunft. Historikertage auf Twitter (2012-2018)" by Mareike König and Paul Ramisch. The project is written in R.
+
 The data report in German can be found on Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6362301.svg)](https://doi.org/10.5281/zenodo.6362301)
 
 # Table of Contents
 1. Dehydrate Twitter Data & Create Data Tables
-    1.1 Dehydrated Data
-    1.2 Twitter Developer Account & Access
-    1.3 Create histag_all & gender
-    1.4 Issues: Deleted Tweets & API changes
+    1. Dehydrated Data
+    2. Twitter Developer Account & Access
+    3. Create histag_all & gender
+    4. Issues: Deleted Tweets & API changes
 4. Tables
 3. Figures
 4. Citation & License
 
 # 1. Dehydrate Twitter Data & Create Data Tables
 The most important piece of data for our paper is data frame containing all the 14207 tweets this paper is based on. Due legal reasons we cannot publicly provide this tweet data, instead we have the dehydrated tweet data, which contains the id (status_id) of each tweet and our annotations. With this you can use the Twitter API to rehydrate the data. To do so you need Twitter API access.
+
 The code for this first step is in **historikertage_corpora.R**
 
 ## 1.1 Dehydrated Data
@@ -45,6 +47,7 @@ When you have created a Twitter app, add your credentials in **historikertage_co
 
 ## 1.3 Create histag_all & gender
 After adding the credentials you can run the script which will create the data frame **histag_all** with all the tweets, and the data frame **gender**, with all the accounts in the corpus are created. These two data frame are the basis for the tables and figures in the report.
+
 They are being exported to **data/histag_all.csv** and **data/gender.csv**
 
 ## 1.4 Issues: Deleted Tweets & API changes
@@ -54,6 +57,7 @@ A second issue are certain changes to the data and API. When preparing this code
 
 # 2. Tables
 The code for the tables can be found in **/tables_code**. After the rehydration and the creation of **data/histag_all.csv** and **data/gender.csv** all but two R scripts run indepentently. They load the needed libraries (if they're installed) and data and to create the tables.
+
 Only **18_table-account-historikertag-tweets.R** amd **19_table-account-VHDTweets-tweets.R** need the Twitter API token to be set as in **historikertage_corpora.R**. This is not needed if the script is running in the same RStudio workspace as historikertage_corpora.R.
 
 The following scripts can be found in /tables_code
@@ -83,6 +87,7 @@ The code for the figures can be found in **/figures_code**. After the rehydratio
 However the files **28_figure-tweet-distribution-account-historikertag.R** and **29_figure-tweet-distribution-vhdresolution.R** need the respective table script **18_table-account-historikertag-tweets.R** and **19_table-account-VHDTweets-tweets.R** to be executed before as those download and export the corresponding data.
 
 For the network graphs the file **15-20_figure-graph.R** only downloads and creates the raw data to import into [Gephi](https://gephi.org/), downloading the corresponding data will take up to two days due to Twitter call limits. More about this is documented in the file itself.
+
 The same apllies for figures that were exported from [Voyant tools](https://voyant-tools.org/): **21-26_figure-corpus-export-voyant.R** which only recreates raw data that needs to be further processed.
 
 The following scripts can be found in /figures_code:
