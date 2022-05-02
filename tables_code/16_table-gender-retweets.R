@@ -1,5 +1,5 @@
 # Number of tweets per gender and category
-# In the paper version the average retweet was build by diving the sum of retweets per gender by the number of all tweets
+# In the paper version the average retweet was build by dividing the sum of retweets per gender by the number of all tweets
 # A clearer and better representation is given by dividing just through the original tweets (not all tweets) as retweets can't be retweetet themselves
 # The outcommented code is the legacy code of the paper
 
