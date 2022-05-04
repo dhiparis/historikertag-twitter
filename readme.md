@@ -1,7 +1,7 @@
 # Historikertage Twitter Code
 This repository contains the code to recreate the annotated figures, tables, statistics and visualisations of the project "Die twitternde Zunft. Historikertage auf Twitter (2012-2018)" by Mareike König and Paul Ramisch. The project is written in R.
 
-The data report in German can be found on Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6362301.svg)](https://doi.org/10.5281/zenodo.6362301)
+The data report in German can be found on Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6362300.svg)](https://doi.org/10.5281/zenodo.6362300)
 
 # Table of Contents
 1. Dehydrate Twitter Data & Create Data Tables
